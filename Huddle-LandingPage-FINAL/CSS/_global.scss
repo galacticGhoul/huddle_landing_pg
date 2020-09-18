@@ -1,0 +1,72 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: $font-body;
+    font-size: 16px;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 1024px){
+        margin-bottom: 100px;
+    }
+
+     img {
+        width: 120px;
+
+        @media screen and (min-width: 1024px) {
+            width: 200px;
+        }
+
+    }
+}
+
+footer {
+    //flex box is a great way to center things
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 1024px) {
+        justify-content: flex-end;
+    }
+
+    > a {
+        margin-right: 16px;
+
+       &:last-child {
+           margin-right: 0px;
+       }
+    }
+
+   i.fab {
+       //flex within flex is possible
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       border: 1px solid #ffffff;
+       border-radius: 50%;
+       width: 48px;
+       height: 48px;
+       color: #ffffff;
+       
+       &:hover {
+
+        color: #f15bb5;
+    }
+   }
+}
+
